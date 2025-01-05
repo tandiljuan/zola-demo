@@ -17,3 +17,6 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+
+# Enable listing of pages in homepage
+list_pages = true
