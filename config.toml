@@ -10,6 +10,9 @@ build_search_index = false
 # Theme name
 theme = "no-style-please"
 
+# Set an unused code as the default language
+default_language = "xx"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -17,8 +20,15 @@ highlight_code = false
 
 # Additional languages definition
 
+## English
+[languages.en]
+title = "Demo Blog"
+generate_feeds = true
+
 ## Spanish
 [languages.es]
+title = "Blog de Demostración"
+generate_feeds = true
 
 [extra]
 # Put all your custom variables here
