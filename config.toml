@@ -24,11 +24,21 @@ highlight_code = false
 [languages.en]
 title = "Demo Blog"
 generate_feeds = true
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+    { name = "contexts" },
+]
 
 ## Spanish
 [languages.es]
 title = "Blog de Demostración"
 generate_feeds = true
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+    { name = "contexts" },
+]
 
 [extra]
 # Put all your custom variables here
