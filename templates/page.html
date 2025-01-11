@@ -32,19 +32,23 @@ Table of contents
 {% endblock content %}
 
 {% block footer %}
+{%- set path_lang = "" -%}
+{%- if config.default_language != lang -%}
+    {%- set path_lang = "/" ~ lang -%}
+{%- endif -%}
 <p class="taxonomies">
 {% if page.taxonomies.tags %}
 {% for tag in page.taxonomies.tags %}
-<a href="/tags/{{ tag | slugify }}">#{{ tag }}</a>
+<a href="{{ path_lang | safe }}/tags/{{ tag | slugify }}">#{{ tag }}</a>
 {% endfor %}
 {% if page.taxonomies.categories %}
 {% for category in page.taxonomies.categories %}
-<a href="/categories/{{ category | slugify }}">+{{ category }}</a>
+<a href="{{ path_lang | safe }}/categories/{{ category | slugify }}">+{{ category }}</a>
 {% endfor %}
 {% endif %}
 {% if page.taxonomies.contexts %}
 {% for context in page.taxonomies.contexts %}
-<a href="/contexts/{{ context | slugify }}">@{{ context }}</a>
+<a href="{{ path_lang | safe }}/contexts/{{ context | slugify }}">@{{ context }}</a>
 {% endfor %}
 {% endif %}
 {% endif %}
