@@ -21,6 +21,9 @@ default_language = "xx"
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 
+# Translate emoji aliases to corresponding Unicode emoji equivalent
+render_emoji = true
+
 # Additional languages definition
 
 ## English
