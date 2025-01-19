@@ -95,6 +95,7 @@
         {% block css %}
         <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}"/>
         {% endblock css %}
+        {% include "partials/head.html" ignore missing -%}
     </head>
     <body theme="auto">
         <div class="w">
