@@ -8,7 +8,7 @@ author = "Juan Manuel Lopez"
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+build_search_index = true
 
 # Theme name
 theme = "no-style-please"
@@ -24,12 +24,18 @@ highlight_code = false
 # Translate emoji aliases to corresponding Unicode emoji equivalent
 render_emoji = true
 
+[search]
+
+# Produce a JSON search index file for [fuse.js](https://www.fusejs.io/)
+index_format = "fuse_json"
+
 # Additional languages definition
 
 ## English
 [languages.en]
 title = "Demo Blog"
 generate_feeds = true
+build_search_index = true
 taxonomies = [
     { name = "tags" },
     { name = "categories" },
@@ -40,6 +46,7 @@ taxonomies = [
 [languages.es]
 title = "Blog de Demostración"
 generate_feeds = true
+build_search_index = true
 taxonomies = [
     { name = "tags" },
     { name = "categories" },
