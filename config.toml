@@ -66,5 +66,6 @@ header_nav = [
     { name = "+categories", url = "/categories" },
     { name = "@contexts", url = "/contexts" },
     { name = "!feed", url = "/atom.xml" },
+    { name = "*search", url = "/search" },
     { name = "[langs]" },
 ]
