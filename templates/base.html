@@ -118,6 +118,7 @@
                 {% if config.extra.footer_nav %}
                     {{ navigation::element(list=config.extra.footer_nav) }}
                 {% endif %}
+                {% include "partials/footer.html" ignore missing -%}
             </footer>
         </div>
     </body>
