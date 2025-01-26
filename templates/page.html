@@ -39,16 +39,19 @@ Table of contents
 <p class="taxonomies">
 {% if page.taxonomies.tags %}
 {% for tag in page.taxonomies.tags %}
-<a href="{{ path_lang | safe }}/tags/{{ tag | slugify }}">#{{ tag }}</a>
+{% set path = [path_lang, "tags", tag | slugify] | join(sep="/") -%}
+<a href="{{ get_url(path=path) | safe }}">#{{ tag }}</a>
 {% endfor %}
 {% if page.taxonomies.categories %}
 {% for category in page.taxonomies.categories %}
-<a href="{{ path_lang | safe }}/categories/{{ category | slugify }}">+{{ category }}</a>
+{% set path = [path_lang, "categories", category | slugify] | join(sep="/") -%}
+<a href="{{ get_url(path=path) | safe }}">+{{ category }}</a>
 {% endfor %}
 {% endif %}
 {% if page.taxonomies.contexts %}
 {% for context in page.taxonomies.contexts %}
-<a href="{{ path_lang | safe }}/contexts/{{ context | slugify }}">@{{ context }}</a>
+{% set path = [path_lang, "contexts", context | slugify] | join(sep="/") -%}
+<a href="{{ get_url(path=path) | safe }}">@{{ context }}</a>
 {% endfor %}
 {% endif %}
 {% endif %}
