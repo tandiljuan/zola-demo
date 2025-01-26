@@ -10,13 +10,47 @@ build_search_index = false
 # Theme name
 theme = "no-style-please"
 
+# Set an unused code as the default language
+default_language = "xx"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
+
+# Additional languages definition
+
+## English
+[languages.en]
+title = "Demo Blog"
+generate_feeds = true
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+    { name = "contexts" },
+]
+
+## Spanish
+[languages.es]
+title = "Blog de Demostración"
+generate_feeds = true
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+    { name = "contexts" },
+]
 
 [extra]
 # Put all your custom variables here
 
 # Enable listing of pages in homepage
 list_pages = true
+
+# Header navigation links
+header_nav = [
+    { name = "~home", url = "/", def_lang=true },
+    { name = "#tags", url = "/tags" },
+    { name = "+categories", url = "/categories" },
+    { name = "@contexts", url = "/contexts" },
+    { name = "[langs]" },
+]
