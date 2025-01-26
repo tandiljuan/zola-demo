@@ -3,7 +3,10 @@
 {% block html_head %}
 <script src="{{ get_url(path='lib/fuse.js/fuse.min.js') }}"></script>
 <script src="{{ get_url(path='search.js') }}"></script>
-<script>const LANGUAGE = '{{ lang }}';</script>
+<script>
+    const BASE_URL = '{{ get_url(path='/', trailing_slash=false) }}';
+    const LANGUAGE = '{{ lang }}';
+</script>
 {% endblock html_head %}
 
 {% block header %}
