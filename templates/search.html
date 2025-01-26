@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block html_head %}
+<script src="{{ get_url(path='lib/fuse.js/fuse.min.js') }}"></script>
+<script src="{{ get_url(path='search.js') }}"></script>
+<script>const LANGUAGE = '{{ lang }}';</script>
+{% endblock html_head %}
+
+{% block header %}
+<h1>{{ section.title }}</h1>
+{% endblock header %}
+
+{% block content %}
+<input type="text" id="search" placeholder="text to search" />
+<ul id="search-results"></ul>
+{{ section.content | safe }}
+{% endblock content %}
