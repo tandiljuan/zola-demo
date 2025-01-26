@@ -44,7 +44,7 @@ function initializeSearch() {
     // Loads the search index from a JSON file
     const loadSearchIndex = async function () {
         if (!searchIndex) {
-            searchIndex = fetch(`/search_index.${LANGUAGE}.json`)
+            searchIndex = fetch(`${BASE_URL}/search_index.${LANGUAGE}.json`)
                 .then(async function(response) {
                     return await response.json();
                 });
